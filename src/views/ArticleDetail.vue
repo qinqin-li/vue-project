@@ -1,25 +1,25 @@
 <template>
   <div style="padding:40px">
-    <el-card shadow="hover" style="max‑width:850px;margin:0 auto">
-      <div v‑if="currentArticle">
+    <el-card shadow="hover" style="max-width:850px;margin:0 auto">
+      <div v-if="currentArticle">
         <el-tag>{{ currentArticle.tag }}</el-tag>
         <h1>{{ currentArticle.title }}</h1>
         <p>📅发布时间：{{ currentArticle.date }} &nbsp;&nbsp; 👁阅读量：{{ currentArticle.view }}</p>
-        <el‑divider></el‑divider>
-        <div style="line‑height:2;font‑size:17px;white‑space:pre‑line">
+        <el-divider></el-divider>
+        <div style="line-height:2;font-size:17px;white-space:pre‑line">
           {{ currentArticle.fullContent }}
         </div>
-        <el‑divider></el‑divider>
-        <el‑button type="primary" @click="goBack">← 返回文章列表</el‑button>
+        <el-divider></el-divider>
+        <el-button type="primary" @click="goBack">← 返回文章列表</el-button>
       </div>
-      <div v‑else>文章加载中……</div>
+      <div v-else>文章加载中……</div>
     </el-card>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { useRoute, useRouter } from 'vue‑router'
+import { useRoute, useRouter } from 'vue-router'
 const route = useRoute()
 const router = useRouter()
 
