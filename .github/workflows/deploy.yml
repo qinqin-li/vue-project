@@ -1,3 +1,8 @@
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 name: Deploy Vue Project to Github Pages
 on:
   push:

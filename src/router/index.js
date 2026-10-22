@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { useUserStore } from '../stores/userStore'
 import Login from '../views/Login.vue'
 import HomePage from '../views/HomePage.vue'
@@ -77,7 +77,7 @@ const routes = [
         path: 'article',
         name: 'adminArticle',
         component: ArticleManage,
-        meta: { title: '文章管理', requireAuth: true }
+        meta: { title: '文章管理', requireAuth: true }// 标记该路由需要登录才能访问
       }
     ]
   },
@@ -101,7 +101,7 @@ const routes = [
   }
 ]
 const router = createRouter({
-  history: createWebHistory(),
+history: createWebHashHistory(),
   routes
 })
 
